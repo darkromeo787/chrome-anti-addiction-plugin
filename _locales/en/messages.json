@@ -1,0 +1,222 @@
+{
+    "extensionName":  {
+                          "message":  "Site Time Limiter"
+                      },
+    "extensionDescription":  {
+                                 "message":  "Limit time spent on configured websites. Disabled by default for safety."
+                             },
+    "appName":  {
+                    "message":  "Site Time Limiter"
+                },
+    "settingsTitle":  {
+                          "message":  "Site Time Limiter Settings"
+                      },
+    "safetyFirstSettings":  {
+                                "message":  "Safety-first settings"
+                            },
+    "safetyIntro":  {
+                        "message":  "Blocking is off by default. Enable it only after confirming the monitored sites and limits."
+                    },
+    "status":  {
+                   "message":  "Status"
+               },
+    "enableTracking":  {
+                           "message":  "Enable tracking and blocking"
+                       },
+    "loading":  {
+                    "message":  "Loading..."
+                },
+    "resetTodayUsage":  {
+                            "message":  "Reset today\u0027s usage"
+                        },
+    "monitoredSites":  {
+                           "message":  "Monitored sites"
+                       },
+    "add":  {
+                "message":  "Add"
+            },
+    "limits":  {
+                   "message":  "Limits"
+               },
+    "sessionLimitLabel":  {
+                              "message":  "Session limit in minutes"
+                          },
+    "siteDailyLimitLabel":  {
+                                "message":  "Per-site daily limit in minutes"
+                            },
+    "dailyLimitLabel":  {
+                            "message":  "All-sites daily limit in minutes"
+                        },
+    "mode":  {
+                 "message":  "Mode"
+             },
+    "modeGentle":  {
+                       "message":  "Gentle: close current monitored tab"
+                   },
+    "modeBlock":  {
+                      "message":  "Block: redirect monitored sites after daily limit"
+                  },
+    "modeStrict":  {
+                       "message":  "Strict: delay relaxed settings"
+                   },
+    "saveSettings":  {
+                         "message":  "Save settings"
+                     },
+    "popupTitle":  {
+                       "message":  "Site Time Limiter"
+                   },
+    "session":  {
+                    "message":  "Session"
+                },
+    "currentSiteToday":  {
+                             "message":  "Current site today"
+                         },
+    "allMonitoredToday":  {
+                              "message":  "All monitored today"
+                          },
+    "noMonitoredSite":  {
+                            "message":  "No monitored site"
+                        },
+    "enabledMode":  {
+                        "placeholders":  {
+                                             "mode":  {
+                                                          "content":  "$1"
+                                                      }
+                                         },
+                        "message":  "Enabled, $MODE$ mode"
+                    },
+    "disabled":  {
+                     "message":  "Disabled"
+                 },
+    "timeLeft":  {
+                     "placeholders":  {
+                                          "used":  {
+                                                       "content":  "$1"
+                                                   },
+                                          "limit":  {
+                                                        "content":  "$2"
+                                                    },
+                                          "remaining":  {
+                                                            "content":  "$3"
+                                                        }
+                                      },
+                     "message":  "$USED$ / $LIMIT$ ($REMAINING$ left)"
+                 },
+    "todayUsed":  {
+                      "placeholders":  {
+                                           "time":  {
+                                                        "content":  "$1"
+                                                    }
+                                       },
+                      "message":  "Today used: $TIME$"
+                  },
+    "pendingSettings":  {
+                            "placeholders":  {
+                                                 "time":  {
+                                                              "content":  "$1"
+                                                          }
+                                             },
+                            "message":  "Pending settings activate at $TIME$"
+                        },
+    "remove":  {
+                   "message":  "Remove"
+               },
+    "validDomainError":  {
+                             "message":  "Enter a valid domain."
+                         },
+    "limitsGreaterThanZero":  {
+                                  "message":  "Limits must be greater than 0."
+                              },
+    "relaxedSettingsDelayed":  {
+                                   "message":  "Relaxed settings will activate after the strict-mode delay."
+                               },
+    "settingsSaved":  {
+                          "message":  "Settings saved."
+                      },
+    "settingsSavedActive":  {
+                                "message":  "Settings saved and active."
+                            },
+    "todayUsageReset":  {
+                            "message":  "Today\u0027s usage was reset."
+                        },
+    "blockedTitle":  {
+                         "message":  "Limit reached"
+                     },
+    "blockedLoading":  {
+                           "message":  "Loading usage details..."
+                       },
+    "blockedHelp":  {
+                        "message":  "Use the extension options page to reset today\u0027s usage or disable blocking."
+                    },
+    "currentSiteUnavailable":  {
+                                   "message":  "Current site usage is unavailable."
+                               },
+    "blockedSiteSummary":  {
+                               "placeholders":  {
+                                                    "used":  {
+                                                                 "content":  "$2"
+                                                             },
+                                                    "site":  {
+                                                                 "content":  "$1"
+                                                             },
+                                                    "limit":  {
+                                                                  "content":  "$3"
+                                                              }
+                                                },
+                               "message":  "$SITE$: $USED$ / $LIMIT$m per-site daily limit."
+                           },
+    "blockedAllSitesSummary":  {
+                                   "placeholders":  {
+                                                        "used":  {
+                                                                     "content":  "$1"
+                                                                 },
+                                                        "limit":  {
+                                                                      "content":  "$2"
+                                                                  }
+                                                    },
+                                   "message":  "All monitored sites: $USED$ / $LIMIT$m all-sites daily limit."
+                               },
+    "sessionWarningTitle":  {
+                                "message":  "Session limit soon"
+                            },
+    "sessionWarningMessage":  {
+                                  "message":  "The current monitored site is close to the session limit."
+                              },
+    "siteDailyWarningTitle":  {
+                                  "message":  "Site daily limit soon"
+                              },
+    "siteDailyWarningMessage":  {
+                                    "message":  "This monitored site\u0027s daily quota is almost used."
+                                },
+    "dailyWarningTitle":  {
+                              "message":  "Daily limit soon"
+                          },
+    "dailyWarningMessage":  {
+                                "message":  "Today\u0027s monitored-site quota is almost used."
+                            },
+    "countdownTitle":  {
+                           "placeholders":  {
+                                                "seconds":  {
+                                                                "content":  "$1"
+                                                            }
+                                            },
+                           "message":  "$SECONDS$s left"
+                       },
+    "countdownMessage":  {
+                             "placeholders":  {
+                                                  "limit_type":  {
+                                                                     "content":  "$1"
+                                                                 }
+                                              },
+                             "message":  "$LIMIT_TYPE$ limit is almost reached."
+                         },
+    "limitTypeSession":  {
+                             "message":  "Session"
+                         },
+    "limitTypeSiteDaily":  {
+                               "message":  "Current site daily"
+                           },
+    "limitTypeDaily":  {
+                           "message":  "All monitored sites daily"
+                       }
+}
