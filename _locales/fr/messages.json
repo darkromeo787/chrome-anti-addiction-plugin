@@ -1,222 +1,231 @@
 {
-    "extensionName":  {
-                          "message":  "Limiteur de temps de site"
-                      },
-    "extensionDescription":  {
-                                 "message":  "Limite le temps passé sur les sites configurés. Désactivé par défaut par sécurité."
-                             },
-    "appName":  {
-                    "message":  "Limiteur de temps de site"
-                },
-    "settingsTitle":  {
-                          "message":  "Réglages du limiteur de temps"
-                      },
-    "safetyFirstSettings":  {
-                                "message":  "Réglages axés sur la sécurité"
-                            },
-    "safetyIntro":  {
-                        "message":  "Le blocage est désactivé par défaut. Activez-le après avoir vérifié les sites surveillés et les limites."
-                    },
-    "status":  {
-                   "message":  "État"
-               },
-    "enableTracking":  {
-                           "message":  "Activer le suivi et le blocage"
-                       },
-    "loading":  {
-                    "message":  "Chargement..."
-                },
-    "resetTodayUsage":  {
-                            "message":  "Réinitialiser l\u0027utilisation du jour"
-                        },
-    "monitoredSites":  {
-                           "message":  "Sites surveillés"
-                       },
-    "add":  {
-                "message":  "Ajouter"
-            },
-    "limits":  {
-                   "message":  "Limites"
-               },
-    "sessionLimitLabel":  {
-                              "message":  "Limite de session en minutes"
-                          },
-    "siteDailyLimitLabel":  {
-                                "message":  "Limite quotidienne par site en minutes"
-                            },
-    "dailyLimitLabel":  {
-                            "message":  "Limite quotidienne tous sites en minutes"
-                        },
-    "mode":  {
-                 "message":  "Mode"
-             },
-    "modeGentle":  {
-                       "message":  "Doux : fermer l\u0027onglet surveillé actuel"
-                   },
-    "modeBlock":  {
-                      "message":  "Blocage : rediriger les sites surveillés après la limite quotidienne"
-                  },
-    "modeStrict":  {
-                       "message":  "Strict : retarder les réglages plus souples"
-                   },
-    "saveSettings":  {
-                         "message":  "Enregistrer les réglages"
-                     },
-    "popupTitle":  {
-                       "message":  "Limiteur de temps de site"
-                   },
-    "session":  {
-                    "message":  "Session"
-                },
-    "currentSiteToday":  {
-                             "message":  "Site actuel aujourd\u0027hui"
-                         },
-    "allMonitoredToday":  {
-                              "message":  "Tous les sites surveillés aujourd\u0027hui"
-                          },
-    "noMonitoredSite":  {
-                            "message":  "Aucun site surveillé"
-                        },
-    "enabledMode":  {
-                        "placeholders":  {
-                                             "mode":  {
-                                                          "content":  "$1"
-                                                      }
-                                         },
-                        "message":  "Activé, mode $MODE$"
-                    },
-    "disabled":  {
-                     "message":  "Désactivé"
-                 },
-    "timeLeft":  {
-                     "placeholders":  {
-                                          "used":  {
-                                                       "content":  "$1"
-                                                   },
-                                          "limit":  {
-                                                        "content":  "$2"
-                                                    },
-                                          "remaining":  {
-                                                            "content":  "$3"
-                                                        }
-                                      },
-                     "message":  "$USED$ / $LIMIT$ ($REMAINING$ restant)"
-                 },
-    "todayUsed":  {
-                      "placeholders":  {
-                                           "time":  {
-                                                        "content":  "$1"
-                                                    }
-                                       },
-                      "message":  "Utilisé aujourd\u0027hui : $"
-                  },
-    "pendingSettings":  {
-                            "placeholders":  {
-                                                 "time":  {
-                                                              "content":  "$1"
-                                                          }
-                                             },
-                            "message":  "Les réglages en attente seront actifs à $TIME$"
-                        },
-    "remove":  {
-                   "message":  "Supprimer"
-               },
-    "validDomainError":  {
-                             "message":  "Saisissez un domaine valide."
-                         },
-    "limitsGreaterThanZero":  {
-                                  "message":  "Les limites doivent être supérieures à 0."
-                              },
-    "relaxedSettingsDelayed":  {
-                                   "message":  "Les réglages plus souples seront activés après le délai du mode strict."
-                               },
-    "settingsSaved":  {
-                          "message":  "Réglages enregistrés."
-                      },
-    "settingsSavedActive":  {
-                                "message":  "Réglages enregistrés et actifs."
-                            },
-    "todayUsageReset":  {
-                            "message":  "L\u0027utilisation du jour a été réinitialisée."
-                        },
-    "blockedTitle":  {
-                         "message":  "Limite atteinte"
-                     },
-    "blockedLoading":  {
-                           "message":  "Chargement des détails d\u0027utilisation..."
-                       },
-    "blockedHelp":  {
-                        "message":  "Utilisez la page d\u0027options de l\u0027extension pour réinitialiser l\u0027utilisation du jour ou désactiver le blocage."
-                    },
-    "currentSiteUnavailable":  {
-                                   "message":  "L\u0027utilisation du site actuel est indisponible."
-                               },
-    "blockedSiteSummary":  {
-                               "placeholders":  {
-                                                    "used":  {
-                                                                 "content":  "$2"
-                                                             },
-                                                    "site":  {
-                                                                 "content":  "$1"
-                                                             },
-                                                    "limit":  {
-                                                                  "content":  "$3"
-                                                              }
-                                                },
-                               "message":  "$SITE$ : $USED$ / $LIMIT$ min de limite quotidienne par site."
-                           },
-    "blockedAllSitesSummary":  {
-                                   "placeholders":  {
-                                                        "used":  {
-                                                                     "content":  "$1"
-                                                                 },
-                                                        "limit":  {
-                                                                      "content":  "$2"
-                                                                  }
-                                                    },
-                                   "message":  "Tous les sites surveillés : $USED$ / $LIMIT$ min de limite quotidienne."
-                               },
-    "sessionWarningTitle":  {
-                                "message":  "Limite de session proche"
-                            },
-    "sessionWarningMessage":  {
-                                  "message":  "Le site surveillé actuel approche de la limite de session."
-                              },
-    "siteDailyWarningTitle":  {
-                                  "message":  "Limite quotidienne du site proche"
-                              },
-    "siteDailyWarningMessage":  {
-                                    "message":  "Le quota quotidien de ce site surveillé est presque épuisé."
-                                },
-    "dailyWarningTitle":  {
-                              "message":  "Limite quotidienne proche"
-                          },
-    "dailyWarningMessage":  {
-                                "message":  "Le quota du jour pour les sites surveillés est presque épuisé."
-                            },
-    "countdownTitle":  {
-                           "placeholders":  {
-                                                "seconds":  {
-                                                                "content":  "$1"
-                                                            }
-                                            },
-                           "message":  "$SECONDS$ s restantes"
-                       },
-    "countdownMessage":  {
-                             "placeholders":  {
-                                                  "limit_type":  {
-                                                                     "content":  "$1"
-                                                                 }
-                                              },
-                             "message":  "La limite $LIMIT_TYPE$ est presque atteinte."
-                         },
-    "limitTypeSession":  {
-                             "message":  "Session"
-                         },
-    "limitTypeSiteDaily":  {
-                               "message":  "Site actuel quotidien"
-                           },
-    "limitTypeDaily":  {
-                           "message":  "Tous les sites surveillés quotidien"
-                       }
+  "extensionName": {
+    "message": "Limiteur de temps de site"
+  },
+  "extensionDescription": {
+    "message": "Limite le temps passé sur les sites configurés. Désactivé par défaut par sécurité."
+  },
+  "appName": {
+    "message": "Limiteur de temps de site"
+  },
+  "settingsTitle": {
+    "message": "Réglages du limiteur de temps"
+  },
+  "safetyFirstSettings": {
+    "message": "Réglages axés sur la sécurité"
+  },
+  "safetyIntro": {
+    "message": "Le blocage est désactivé par défaut. Activez-le après avoir vérifié les sites surveillés et les limites."
+  },
+  "status": {
+    "message": "État"
+  },
+  "enableTracking": {
+    "message": "Activer le suivi et le blocage"
+  },
+  "loading": {
+    "message": "Chargement..."
+  },
+  "resetTodayUsage": {
+    "message": "Réinitialiser l'utilisation du jour"
+  },
+  "monitoredSites": {
+    "message": "Sites surveillés"
+  },
+  "add": {
+    "message": "Ajouter"
+  },
+  "limits": {
+    "message": "Limites"
+  },
+  "sessionLimitLabel": {
+    "message": "Limite de session en minutes"
+  },
+  "siteDailyLimitLabel": {
+    "message": "Limite quotidienne par site en minutes"
+  },
+  "dailyLimitLabel": {
+    "message": "Limite quotidienne tous sites en minutes"
+  },
+  "mode": {
+    "message": "Mode"
+  },
+  "modeGentle": {
+    "message": "Doux : fermer l'onglet surveillé actuel"
+  },
+  "modeBlock": {
+    "message": "Blocage : rediriger les sites surveillés après la limite quotidienne"
+  },
+  "modeStrict": {
+    "message": "Strict : retarder les réglages plus souples"
+  },
+  "saveSettings": {
+    "message": "Enregistrer les réglages"
+  },
+  "popupTitle": {
+    "message": "Limiteur de temps de site"
+  },
+  "session": {
+    "message": "Session"
+  },
+  "currentSiteToday": {
+    "message": "Site actuel aujourd'hui"
+  },
+  "allMonitoredToday": {
+    "message": "Tous les sites surveillés aujourd'hui"
+  },
+  "noMonitoredSite": {
+    "message": "Aucun site surveillé"
+  },
+  "enabledMode": {
+    "placeholders": {
+      "mode": {
+        "content": "$1"
+      }
+    },
+    "message": "Activé, mode $MODE$"
+  },
+  "disabled": {
+    "message": "Désactivé"
+  },
+  "timeLeft": {
+    "placeholders": {
+      "used": {
+        "content": "$1"
+      },
+      "limit": {
+        "content": "$2"
+      },
+      "remaining": {
+        "content": "$3"
+      }
+    },
+    "message": "$USED$ / $LIMIT$ ($REMAINING$ restant)"
+  },
+  "todayUsed": {
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    },
+    "message": "Utilisé aujourd'hui : $"
+  },
+  "pendingSettings": {
+    "placeholders": {
+      "time": {
+        "content": "$1"
+      }
+    },
+    "message": "Les réglages en attente seront actifs à $TIME$"
+  },
+  "remove": {
+    "message": "Supprimer"
+  },
+  "validDomainError": {
+    "message": "Saisissez un domaine valide."
+  },
+  "limitsGreaterThanZero": {
+    "message": "Les limites doivent être supérieures à 0."
+  },
+  "relaxedSettingsDelayed": {
+    "message": "Les réglages plus souples seront activés après le délai du mode strict."
+  },
+  "settingsSaved": {
+    "message": "Réglages enregistrés."
+  },
+  "settingsSavedActive": {
+    "message": "Réglages enregistrés et actifs."
+  },
+  "todayUsageReset": {
+    "message": "L'utilisation du jour a été réinitialisée."
+  },
+  "blockedTitle": {
+    "message": "Limite atteinte"
+  },
+  "blockedLoading": {
+    "message": "Chargement des détails d'utilisation..."
+  },
+  "blockedHelp": {
+    "message": "Utilisez la page d'options de l'extension pour réinitialiser l'utilisation du jour ou désactiver le blocage."
+  },
+  "currentSiteUnavailable": {
+    "message": "L'utilisation du site actuel est indisponible."
+  },
+  "blockedSiteSummary": {
+    "placeholders": {
+      "used": {
+        "content": "$2"
+      },
+      "site": {
+        "content": "$1"
+      },
+      "limit": {
+        "content": "$3"
+      }
+    },
+    "message": "$SITE$ : $USED$ / $LIMIT$ min de limite quotidienne par site."
+  },
+  "blockedAllSitesSummary": {
+    "placeholders": {
+      "used": {
+        "content": "$1"
+      },
+      "limit": {
+        "content": "$2"
+      }
+    },
+    "message": "Tous les sites surveillés : $USED$ / $LIMIT$ min de limite quotidienne."
+  },
+  "sessionWarningTitle": {
+    "message": "Limite de session proche"
+  },
+  "sessionWarningMessage": {
+    "message": "Le site surveillé actuel approche de la limite de session."
+  },
+  "siteDailyWarningTitle": {
+    "message": "Limite quotidienne du site proche"
+  },
+  "siteDailyWarningMessage": {
+    "message": "Le quota quotidien de ce site surveillé est presque épuisé."
+  },
+  "dailyWarningTitle": {
+    "message": "Limite quotidienne proche"
+  },
+  "dailyWarningMessage": {
+    "message": "Le quota du jour pour les sites surveillés est presque épuisé."
+  },
+  "countdownTitle": {
+    "placeholders": {
+      "seconds": {
+        "content": "$1"
+      }
+    },
+    "message": "$SECONDS$ s restantes"
+  },
+  "countdownMessage": {
+    "placeholders": {
+      "limit_type": {
+        "content": "$1"
+      }
+    },
+    "message": "La limite $LIMIT_TYPE$ est presque atteinte."
+  },
+  "limitTypeSession": {
+    "message": "Session"
+  },
+  "limitTypeSiteDaily": {
+    "message": "Site actuel quotidien"
+  },
+  "limitTypeDaily": {
+    "message": "Tous les sites surveillés quotidien"
+  },
+  "modeNameGentle": {
+    "message": "doux"
+  },
+  "modeNameBlock": {
+    "message": "blocage"
+  },
+  "modeNameStrict": {
+    "message": "strict"
+  }
 }

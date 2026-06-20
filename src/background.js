@@ -36,7 +36,7 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
     return false;
   }
 
-  getCurrentStatus(message.tabUrl).then(sendResponse);
+  getCurrentStatus({ tabUrl: message.tabUrl, tabId: message.tabId }).then(sendResponse);
   return true;
 });
 
@@ -50,16 +50,19 @@ async function updateTracking() {
   await saveUsage(undefined, state.usage);
 }
 
-async function getCurrentStatus(tabUrl) {
+async function getCurrentStatus({ tabUrl, tabId } = {}) {
   const state = await prepareTrackingState();
   const activeContext = tabUrl
-    ? getContextFromUrl(tabUrl, state.settings.sites)
+    ? getContextFromUrl(tabUrl, state.settings.sites, tabId)
     : await getActiveContext(state.settings.sites);
 
   if (activeContext?.matchedSite) {
     state.usage = startSession(state.usage, activeContext.matchedSite);
   }
 
+  await sendWarningsIfNeeded(state, activeContext);
+  await enforceLimits(state, activeContext);
+  await updateBadge(state);
   await saveUsage(undefined, state.usage);
   return getLimitStatus(state, activeContext);
 }
@@ -89,13 +92,14 @@ async function ensureTickAlarm() {
   }
 }
 
-function getContextFromUrl(url, sites) {
+function getContextFromUrl(url, sites, tabId = null) {
   return {
-    tabId: null,
+    tabId: typeof tabId === "number" ? tabId : null,
     url,
     matchedSite: getMatchedSite(url, sites)
   };
 }
+
 async function getActiveContext(sites) {
   const currentWindow = await chrome.windows.getLastFocused();
   if (!currentWindow?.focused || currentWindow.id == null) {
@@ -140,7 +144,7 @@ async function sendWarningsIfNeeded(state, activeContext) {
 
 async function sendCountdownNotifications(state, activeContext) {
   const limitStatus = getLimitStatus(state, activeContext);
-  for (const candidate of getCountdownCandidates(limitStatus)) {
+  for (const candidate of getCountdownCandidates(limitStatus, state.usage.notified.countdowns ?? {})) {
     const key = `${candidate.type}:${candidate.milestone}`;
     if (state.usage.notified.countdowns[key]) {
       continue;

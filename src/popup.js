@@ -13,6 +13,7 @@ const elements = {
 };
 
 let currentPageUrl = null;
+let currentTabId = null;
 
 init();
 
@@ -23,25 +24,47 @@ function init() {
 }
 
 async function refreshStatus() {
-  currentPageUrl = rememberPageUrl(await getActiveTabUrl(), currentPageUrl);
-  const status = await chrome.runtime.sendMessage({ type: "get-status", tabUrl: currentPageUrl });
+  rememberActiveTab(await getActiveTab());
+  const status = await chrome.runtime.sendMessage({ type: "get-status", tabUrl: currentPageUrl, tabId: currentTabId });
   render(status);
 }
 
-async function getActiveTabUrl() {
+async function getActiveTab() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-  return tab?.url ?? null;
+  return tab ?? null;
+}
+
+function rememberActiveTab(tab) {
+  const nextPageUrl = rememberPageUrl(tab?.url ?? null, currentPageUrl);
+  if (nextPageUrl !== currentPageUrl) {
+    currentPageUrl = nextPageUrl;
+    currentTabId = typeof tab?.id === "number" ? tab.id : currentTabId;
+    return;
+  }
+
+  if (nextPageUrl != null && typeof tab?.id === "number" && tab.url === nextPageUrl) {
+    currentTabId = tab.id;
+  }
 }
 
 function render(status) {
   elements.siteName.textContent = status.matchedSite ?? msg("noMonitoredSite");
-  elements.modeText.textContent = status.enabled ? msg("enabledMode", [status.mode]) : msg("disabled");
+  elements.modeText.textContent = status.enabled ? msg("enabledMode", [formatMode(status.mode)]) : msg("disabled");
 
   renderLimit(elements.sessionText, elements.sessionMeter, status.session);
   renderLimit(elements.siteDailyText, elements.siteDailyMeter, status.siteDaily);
   renderLimit(elements.dailyText, elements.dailyMeter, status.daily);
 }
 
+function formatMode(mode) {
+  if (mode === "gentle") {
+    return msg("modeNameGentle");
+  }
+  if (mode === "strict") {
+    return msg("modeNameStrict");
+  }
+  return msg("modeNameBlock");
+}
 function renderLimit(textElement, meterElement, limit) {
   textElement.textContent = msg("timeLeft", [formatSeconds(limit.usedSeconds), formatSeconds(limit.limitSeconds), formatSeconds(limit.remainingSeconds)]);
   meterElement.value = limit.limitSeconds > 0 ? Math.min(100, Math.round((limit.usedSeconds / limit.limitSeconds) * 100)) : 0;

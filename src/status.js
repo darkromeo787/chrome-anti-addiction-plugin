@@ -1,4 +1,5 @@
-const COUNTDOWN_MILESTONES = new Set([30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
+const COUNTDOWN_MILESTONES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30];
+const COUNTDOWN_MILESTONE_SET = new Set(COUNTDOWN_MILESTONES);
 
 export function getLimitStatus(state, activeContext) {
   const matchedSite = activeContext ? activeContext.matchedSite : state.usage.activeSite ?? null;
@@ -17,18 +18,26 @@ export function getLimitStatus(state, activeContext) {
 }
 
 export function getCountdownMilestone(remainingSeconds) {
-  return COUNTDOWN_MILESTONES.has(remainingSeconds) ? remainingSeconds : null;
+  return COUNTDOWN_MILESTONE_SET.has(remainingSeconds) ? remainingSeconds : null;
 }
 
-export function getCountdownCandidates(limitStatus) {
+export function getCountdownCandidates(limitStatus, notifiedCountdowns = {}) {
   return [
     { type: "session", ...limitStatus.session },
     { type: "siteDaily", ...limitStatus.siteDaily },
     { type: "daily", ...limitStatus.daily }
-  ].map((candidate) => ({
-    ...candidate,
-    milestone: getCountdownMilestone(candidate.remainingSeconds)
-  })).filter((candidate) => candidate.milestone != null);
+  ].map((candidate) => {
+    const milestone = getNextUnnotifiedMilestone(candidate.type, candidate.remainingSeconds, notifiedCountdowns);
+    return { ...candidate, milestone };
+  }).filter((candidate) => candidate.milestone != null);
+}
+
+function getNextUnnotifiedMilestone(type, remainingSeconds, notifiedCountdowns) {
+  const milestone = COUNTDOWN_MILESTONES.find((candidate) => remainingSeconds <= candidate) ?? null;
+  if (milestone == null || notifiedCountdowns[`${type}:${milestone}`]) {
+    return null;
+  }
+  return milestone;
 }
 
 function buildLimit(usedSeconds, limitMinutes) {

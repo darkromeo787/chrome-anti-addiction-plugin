@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { getCountdownMilestone, getLimitStatus } from "../src/status.js";
+import { getCountdownCandidates, getCountdownMilestone, getLimitStatus } from "../src/status.js";
 
 const state = {
   settings: {
@@ -58,5 +58,24 @@ describe("getCountdownMilestone", () => {
     expect(getCountdownMilestone(1)).toBe(1);
     expect(getCountdownMilestone(29)).toBeNull();
     expect(getCountdownMilestone(0)).toBeNull();
+  });
+});
+describe("getCountdownCandidates", () => {
+  it("emits the next unnotified milestone after a tick crosses below it", () => {
+    expect(getCountdownCandidates({
+      session: { usedSeconds: 281, limitSeconds: 300, remainingSeconds: 19 },
+      siteDaily: { usedSeconds: 0, limitSeconds: 3600, remainingSeconds: 3600 },
+      daily: { usedSeconds: 0, limitSeconds: 7200, remainingSeconds: 7200 }
+    }, {})).toEqual([
+      expect.objectContaining({ type: "session", milestone: 20 })
+    ]);
+  });
+
+  it("does not repeat milestones that were already notified", () => {
+    expect(getCountdownCandidates({
+      session: { usedSeconds: 281, limitSeconds: 300, remainingSeconds: 19 },
+      siteDaily: { usedSeconds: 0, limitSeconds: 3600, remainingSeconds: 3600 },
+      daily: { usedSeconds: 0, limitSeconds: 7200, remainingSeconds: 7200 }
+    }, { "session:20": true })).toEqual([]);
   });
 });
