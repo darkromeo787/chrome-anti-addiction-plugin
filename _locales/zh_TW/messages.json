@@ -1,0 +1,222 @@
+{
+    "extensionName":  {
+                          "message":  "網站防沉迷計時器"
+                      },
+    "extensionDescription":  {
+                                 "message":  "限制指定網站的使用時間。為安全起見，預設關閉。"
+                             },
+    "appName":  {
+                    "message":  "網站防沉迷計時器"
+                },
+    "settingsTitle":  {
+                          "message":  "網站防沉迷設定"
+                      },
+    "safetyFirstSettings":  {
+                                "message":  "安全優先設定"
+                            },
+    "safetyIntro":  {
+                        "message":  "攔截預設關閉。請確認受控網站和時間限制後再啟用。"
+                    },
+    "status":  {
+                   "message":  "狀態"
+               },
+    "enableTracking":  {
+                           "message":  "啟用計時和攔截"
+                       },
+    "loading":  {
+                    "message":  "載入中..."
+                },
+    "resetTodayUsage":  {
+                            "message":  "重設今日用量"
+                        },
+    "monitoredSites":  {
+                           "message":  "受控網站"
+                       },
+    "add":  {
+                "message":  "新增"
+            },
+    "limits":  {
+                   "message":  "時間限制"
+               },
+    "sessionLimitLabel":  {
+                              "message":  "單次瀏覽限制（分鐘）"
+                          },
+    "siteDailyLimitLabel":  {
+                                "message":  "單一網站每日限制（分鐘）"
+                            },
+    "dailyLimitLabel":  {
+                            "message":  "所有受控網站每日總限制（分鐘）"
+                        },
+    "mode":  {
+                 "message":  "模式"
+             },
+    "modeGentle":  {
+                       "message":  "溫和：關閉目前受控分頁"
+                   },
+    "modeBlock":  {
+                      "message":  "攔截：達到每日限制後跳轉到攔截頁"
+                  },
+    "modeStrict":  {
+                       "message":  "嚴格：放寬設定延遲生效"
+                   },
+    "saveSettings":  {
+                         "message":  "儲存設定"
+                     },
+    "popupTitle":  {
+                       "message":  "網站防沉迷計時器"
+                   },
+    "session":  {
+                    "message":  "單次瀏覽"
+                },
+    "currentSiteToday":  {
+                             "message":  "目前網站今日"
+                         },
+    "allMonitoredToday":  {
+                              "message":  "所有受控網站今日"
+                          },
+    "noMonitoredSite":  {
+                            "message":  "目前不是受控網站"
+                        },
+    "enabledMode":  {
+                        "placeholders":  {
+                                             "mode":  {
+                                                          "content":  "$1"
+                                                      }
+                                         },
+                        "message":  "已啟用，$MODE$ 模式"
+                    },
+    "disabled":  {
+                     "message":  "已關閉"
+                 },
+    "timeLeft":  {
+                     "placeholders":  {
+                                          "used":  {
+                                                       "content":  "$1"
+                                                   },
+                                          "limit":  {
+                                                        "content":  "$2"
+                                                    },
+                                          "remaining":  {
+                                                            "content":  "$3"
+                                                        }
+                                      },
+                     "message":  "$USED$ / $LIMIT$（剩餘 $REMAINING$）"
+                 },
+    "todayUsed":  {
+                      "placeholders":  {
+                                           "time":  {
+                                                        "content":  "$1"
+                                                    }
+                                       },
+                      "message":  "今日已用：$TIME$"
+                  },
+    "pendingSettings":  {
+                            "placeholders":  {
+                                                 "time":  {
+                                                              "content":  "$1"
+                                                          }
+                                             },
+                            "message":  "待生效設定將在 $TIME$ 啟用"
+                        },
+    "remove":  {
+                   "message":  "移除"
+               },
+    "validDomainError":  {
+                             "message":  "請輸入有效網域。"
+                         },
+    "limitsGreaterThanZero":  {
+                                  "message":  "時間限制必須大於 0。"
+                              },
+    "relaxedSettingsDelayed":  {
+                                   "message":  "放寬後的設定將在嚴格模式延遲後生效。"
+                               },
+    "settingsSaved":  {
+                          "message":  "設定已儲存。"
+                      },
+    "settingsSavedActive":  {
+                                "message":  "設定已儲存並生效。"
+                            },
+    "todayUsageReset":  {
+                            "message":  "今日用量已重設。"
+                        },
+    "blockedTitle":  {
+                         "message":  "已達到限制"
+                     },
+    "blockedLoading":  {
+                           "message":  "正在載入用量詳情..."
+                       },
+    "blockedHelp":  {
+                        "message":  "可在擴充功能設定頁重設今日用量或關閉攔截。"
+                    },
+    "currentSiteUnavailable":  {
+                                   "message":  "無法取得目前網站用量。"
+                               },
+    "blockedSiteSummary":  {
+                               "placeholders":  {
+                                                    "used":  {
+                                                                 "content":  "$2"
+                                                             },
+                                                    "site":  {
+                                                                 "content":  "$1"
+                                                             },
+                                                    "limit":  {
+                                                                  "content":  "$3"
+                                                              }
+                                                },
+                               "message":  "$SITE$：$USED$ / $LIMIT$ 分鐘單站每日限制。"
+                           },
+    "blockedAllSitesSummary":  {
+                                   "placeholders":  {
+                                                        "used":  {
+                                                                     "content":  "$1"
+                                                                 },
+                                                        "limit":  {
+                                                                      "content":  "$2"
+                                                                  }
+                                                    },
+                                   "message":  "所有受控網站：$USED$ / $LIMIT$ 分鐘每日總限制。"
+                               },
+    "sessionWarningTitle":  {
+                                "message":  "單次瀏覽即將到限"
+                            },
+    "sessionWarningMessage":  {
+                                  "message":  "目前受控網站快達到單次瀏覽限制。"
+                              },
+    "siteDailyWarningTitle":  {
+                                  "message":  "目前網站今日即將到限"
+                              },
+    "siteDailyWarningMessage":  {
+                                    "message":  "目前受控網站的今日額度快用完了。"
+                                },
+    "dailyWarningTitle":  {
+                              "message":  "今日總額度即將到限"
+                          },
+    "dailyWarningMessage":  {
+                                "message":  "今日受控網站總額度快用完了。"
+                            },
+    "countdownTitle":  {
+                           "placeholders":  {
+                                                "seconds":  {
+                                                                "content":  "$1"
+                                                            }
+                                            },
+                           "message":  "剩餘 $SECONDS$ 秒"
+                       },
+    "countdownMessage":  {
+                             "placeholders":  {
+                                                  "limit_type":  {
+                                                                     "content":  "$1"
+                                                                 }
+                                              },
+                             "message":  "$LIMIT_TYPE$限制即將達到。"
+                         },
+    "limitTypeSession":  {
+                             "message":  "單次瀏覽"
+                         },
+    "limitTypeSiteDaily":  {
+                               "message":  "目前網站今日"
+                           },
+    "limitTypeDaily":  {
+                           "message":  "所有受控網站今日總量"
+                       }
+}
