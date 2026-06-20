@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="settingsTitle">Site Time Limiter Settings</title>
+    <link rel="stylesheet" href="../styles/options.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <p class="eyebrow" data-i18n="appName">Site Time Limiter</p>
+        <h1 data-i18n="safetyFirstSettings">Safety-first settings</h1>
+        <p class="muted" data-i18n="safetyIntro">Blocking is off by default. Enable it only after confirming the monitored sites and limits.</p>
+      </header>
+
+      <section class="panel">
+        <h2 data-i18n="status">Status</h2>
+        <label class="checkbox-row">
+          <input id="enabled" type="checkbox" />
+          <span data-i18n="enableTracking">Enable tracking and blocking</span>
+        </label>
+        <p id="usageText" data-i18n="loading">Loading...</p>
+        <p id="pendingText" class="muted"></p>
+        <button id="resetUsageButton" type="button" data-i18n="resetTodayUsage">Reset today's usage</button>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="monitoredSites">Monitored sites</h2>
+        <ul id="siteList" class="site-list"></ul>
+        <form id="siteForm" class="inline-form">
+          <input id="siteInput" type="text" placeholder="zhihu.com" autocomplete="off" />
+          <button type="submit" data-i18n="add">Add</button>
+        </form>
+        <p id="siteError" class="error"></p>
+      </section>
+
+      <section class="panel">
+        <h2 data-i18n="limits">Limits</h2>
+        <label>
+          <span data-i18n="sessionLimitLabel">Session limit in minutes</span>
+          <input id="sessionLimit" type="number" min="1" step="1" />
+        </label>
+        <label>
+          <span data-i18n="siteDailyLimitLabel">Per-site daily limit in minutes</span>
+          <input id="siteDailyLimit" type="number" min="1" step="1" />
+        </label>
+        <label>
+          <span data-i18n="dailyLimitLabel">All-sites daily limit in minutes</span>
+          <input id="dailyLimit" type="number" min="1" step="1" />
+        </label>
+        <label>
+          <span data-i18n="mode">Mode</span>
+          <select id="mode">
+            <option value="gentle" data-i18n="modeGentle">Gentle: close current monitored tab</option>
+            <option value="block" data-i18n="modeBlock">Block: redirect monitored sites after daily limit</option>
+            <option value="strict" data-i18n="modeStrict">Strict: delay relaxed settings</option>
+          </select>
+        </label>
+        <button id="saveButton" type="button" data-i18n="saveSettings">Save settings</button>
+        <p id="saveMessage" class="muted"></p>
+      </section>
+    </main>
+    <script type="module" src="../src/options.js"></script>
+  </body>
+</html>
