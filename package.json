@@ -1,0 +1,14 @@
+{
+  "name": "chrome-anti-addiction-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm test"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.9"
+  }
+}
