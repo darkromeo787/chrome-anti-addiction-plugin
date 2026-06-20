@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="popupTitle">Site Time Limiter</title>
+    <link rel="stylesheet" href="../styles/popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header>
+        <p class="eyebrow" data-i18n="appName">Site Time Limiter</p>
+        <h1 id="siteName" data-i18n="loading">Loading...</h1>
+        <p id="modeText" class="muted"></p>
+      </header>
+
+      <section class="limits">
+        <article>
+          <span data-i18n="session">Session</span>
+          <strong id="sessionText">--</strong>
+          <meter id="sessionMeter" min="0" max="100" value="0"></meter>
+        </article>
+        <article>
+          <span data-i18n="currentSiteToday">Current site today</span>
+          <strong id="siteDailyText">--</strong>
+          <meter id="siteDailyMeter" min="0" max="100" value="0"></meter>
+        </article>
+        <article>
+          <span data-i18n="allMonitoredToday">All monitored today</span>
+          <strong id="dailyText">--</strong>
+          <meter id="dailyMeter" min="0" max="100" value="0"></meter>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="../src/popup.js"></script>
+  </body>
+</html>
