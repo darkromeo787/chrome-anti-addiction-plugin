@@ -1,0 +1,222 @@
+{
+    "extensionName":  {
+                          "message":  "网站防沉迷计时器"
+                      },
+    "extensionDescription":  {
+                                 "message":  "限制指定网站的使用时间。为安全起见，默认关闭。"
+                             },
+    "appName":  {
+                    "message":  "网站防沉迷计时器"
+                },
+    "settingsTitle":  {
+                          "message":  "网站防沉迷设置"
+                      },
+    "safetyFirstSettings":  {
+                                "message":  "安全优先设置"
+                            },
+    "safetyIntro":  {
+                        "message":  "拦截默认关闭。请确认受控网站和时间限制后再启用。"
+                    },
+    "status":  {
+                   "message":  "状态"
+               },
+    "enableTracking":  {
+                           "message":  "启用计时和拦截"
+                       },
+    "loading":  {
+                    "message":  "加载中..."
+                },
+    "resetTodayUsage":  {
+                            "message":  "重置今日用量"
+                        },
+    "monitoredSites":  {
+                           "message":  "受控网站"
+                       },
+    "add":  {
+                "message":  "添加"
+            },
+    "limits":  {
+                   "message":  "时间限制"
+               },
+    "sessionLimitLabel":  {
+                              "message":  "单次浏览限制（分钟）"
+                          },
+    "siteDailyLimitLabel":  {
+                                "message":  "单个网站每日限制（分钟）"
+                            },
+    "dailyLimitLabel":  {
+                            "message":  "所有受控网站每日总限制（分钟）"
+                        },
+    "mode":  {
+                 "message":  "模式"
+             },
+    "modeGentle":  {
+                       "message":  "温和：关闭当前受控标签页"
+                   },
+    "modeBlock":  {
+                      "message":  "拦截：达到每日限制后跳转到拦截页"
+                  },
+    "modeStrict":  {
+                       "message":  "严格：放宽设置延迟生效"
+                   },
+    "saveSettings":  {
+                         "message":  "保存设置"
+                     },
+    "popupTitle":  {
+                       "message":  "网站防沉迷计时器"
+                   },
+    "session":  {
+                    "message":  "单次浏览"
+                },
+    "currentSiteToday":  {
+                             "message":  "当前网站今日"
+                         },
+    "allMonitoredToday":  {
+                              "message":  "所有受控网站今日"
+                          },
+    "noMonitoredSite":  {
+                            "message":  "当前不是受控网站"
+                        },
+    "enabledMode":  {
+                        "placeholders":  {
+                                             "mode":  {
+                                                          "content":  "$1"
+                                                      }
+                                         },
+                        "message":  "已启用，$MODE$ 模式"
+                    },
+    "disabled":  {
+                     "message":  "已关闭"
+                 },
+    "timeLeft":  {
+                     "placeholders":  {
+                                          "used":  {
+                                                       "content":  "$1"
+                                                   },
+                                          "limit":  {
+                                                        "content":  "$2"
+                                                    },
+                                          "remaining":  {
+                                                            "content":  "$3"
+                                                        }
+                                      },
+                     "message":  "$USED$ / $LIMIT$（剩余 $REMAINING$）"
+                 },
+    "todayUsed":  {
+                      "placeholders":  {
+                                           "time":  {
+                                                        "content":  "$1"
+                                                    }
+                                       },
+                      "message":  "今日已用：$TIME$"
+                  },
+    "pendingSettings":  {
+                            "placeholders":  {
+                                                 "time":  {
+                                                              "content":  "$1"
+                                                          }
+                                             },
+                            "message":  "待生效设置将在 $TIME$ 启用"
+                        },
+    "remove":  {
+                   "message":  "移除"
+               },
+    "validDomainError":  {
+                             "message":  "请输入有效域名。"
+                         },
+    "limitsGreaterThanZero":  {
+                                  "message":  "时间限制必须大于 0。"
+                              },
+    "relaxedSettingsDelayed":  {
+                                   "message":  "放宽后的设置将在严格模式延迟后生效。"
+                               },
+    "settingsSaved":  {
+                          "message":  "设置已保存。"
+                      },
+    "settingsSavedActive":  {
+                                "message":  "设置已保存并生效。"
+                            },
+    "todayUsageReset":  {
+                            "message":  "今日用量已重置。"
+                        },
+    "blockedTitle":  {
+                         "message":  "已达到限制"
+                     },
+    "blockedLoading":  {
+                           "message":  "正在加载用量详情..."
+                       },
+    "blockedHelp":  {
+                        "message":  "可在扩展设置页重置今日用量或关闭拦截。"
+                    },
+    "currentSiteUnavailable":  {
+                                   "message":  "无法获取当前网站用量。"
+                               },
+    "blockedSiteSummary":  {
+                               "placeholders":  {
+                                                    "used":  {
+                                                                 "content":  "$2"
+                                                             },
+                                                    "site":  {
+                                                                 "content":  "$1"
+                                                             },
+                                                    "limit":  {
+                                                                  "content":  "$3"
+                                                              }
+                                                },
+                               "message":  "$SITE$：$USED$ / $LIMIT$ 分钟单站每日限制。"
+                           },
+    "blockedAllSitesSummary":  {
+                                   "placeholders":  {
+                                                        "used":  {
+                                                                     "content":  "$1"
+                                                                 },
+                                                        "limit":  {
+                                                                      "content":  "$2"
+                                                                  }
+                                                    },
+                                   "message":  "所有受控网站：$USED$ / $LIMIT$ 分钟每日总限制。"
+                               },
+    "sessionWarningTitle":  {
+                                "message":  "单次浏览即将到限"
+                            },
+    "sessionWarningMessage":  {
+                                  "message":  "当前受控网站快达到单次浏览限制。"
+                              },
+    "siteDailyWarningTitle":  {
+                                  "message":  "当前网站今日即将到限"
+                              },
+    "siteDailyWarningMessage":  {
+                                    "message":  "当前受控网站的今日额度快用完了。"
+                                },
+    "dailyWarningTitle":  {
+                              "message":  "今日总额度即将到限"
+                          },
+    "dailyWarningMessage":  {
+                                "message":  "今日受控网站总额度快用完了。"
+                            },
+    "countdownTitle":  {
+                           "placeholders":  {
+                                                "seconds":  {
+                                                                "content":  "$1"
+                                                            }
+                                            },
+                           "message":  "剩余 $SECONDS$ 秒"
+                       },
+    "countdownMessage":  {
+                             "placeholders":  {
+                                                  "limit_type":  {
+                                                                     "content":  "$1"
+                                                                 }
+                                              },
+                             "message":  "$LIMIT_TYPE$限制即将达到。"
+                         },
+    "limitTypeSession":  {
+                             "message":  "单次浏览"
+                         },
+    "limitTypeSiteDaily":  {
+                               "message":  "当前网站今日"
+                           },
+    "limitTypeDaily":  {
+                           "message":  "所有受控网站今日总量"
+                       }
+}
